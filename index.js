@@ -19,7 +19,7 @@ app.get('/', (request, response)=>{
 app.get('/:id', (request, response)=>{
 	let ref = db.collection(`shortCode/res2me/list`).doc(request.params.id);
 	ref.get().then(r=>{
-		let sc = r;
+		let sc = r.data();
 		response.send(sc)
 	})
 })
