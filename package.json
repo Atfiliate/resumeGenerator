@@ -1,5 +1,5 @@
 {
-	"name": "Short Code",
+	"name": "ShortCode",
 	"version": "0.0.1",
 	"description": "Sends users to long-code urls",
 	"engines": {
