@@ -12,7 +12,7 @@ var db = firebase.firestore();
 var app = express();
 app.set('port', (process.env.PORT || 5000));
 app.get('/', (request, response)=>{
-	response.redirect('https://a.alphabetize.us/#/project/resumes');
+	response.redirect('https://app.res2.me/#/project/resumes');
 })
 app.get('/:id', (request, response)=>{
 	let ref = db.collection(`shortCode/res2me/list`).doc(request.params.id);
@@ -21,9 +21,9 @@ app.get('/:id', (request, response)=>{
 		if(sc && sc.url)
 			response.redirect(sc.url);
 		else
-			response.redirect('https://a.alphabetize.us/#/project/resumes');
+			response.redirect('https://app.res2.me/#/project/resumes');
 	}).catch(e=>{
-		response.redirect('https://a.alphabetize.us/#/project/resumes');
+		response.redirect('https://app.res2.me/#/project/resumes');
 	})
 })
 
