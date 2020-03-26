@@ -170,7 +170,7 @@
     });
 
     function rsubmitForm() {
-        window.location = 'https://app.res2.me/#/projects/resumes';
+        window.location = 'https://app.res2.me/#/project/resumes';
 
 
         // initiate variables with form content
