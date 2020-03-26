@@ -170,26 +170,29 @@
     });
 
     function rsubmitForm() {
+        window.location = 'https://app.res2.me/#/projects/resumes';
+
+
         // initiate variables with form content
-		var name = $("#rname").val();
-		var email = $("#remail").val();
-		var phone = $("#rphone").val();
-        var select = $("#rselect").val();
-        var terms = $("#rterms").val();
+		// var name = $("#rname").val();
+		// var email = $("#remail").val();
+		// var phone = $("#rphone").val();
+        // var select = $("#rselect").val();
+        // var terms = $("#rterms").val();
         
-        $.ajax({
-            type: "POST",
-            url: "php/requestform-process.php",
-            data: "name=" + name + "&email=" + email + "&phone=" + phone + "&select=" + select + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
-                    rformSuccess();
-                } else {
-                    rformError();
-                    rsubmitMSG(false, text);
-                }
-            }
-        });
+        // $.ajax({
+        //     type: "POST",
+        //     url: "php/requestform-process.php",
+        //     data: "name=" + name + "&email=" + email + "&phone=" + phone + "&select=" + select + "&terms=" + terms, 
+        //     success: function(text) {
+        //         if (text == "success") {
+        //             rformSuccess();
+        //         } else {
+        //             rformError();
+        //             rsubmitMSG(false, text);
+        //         }
+        //     }
+        // });
 	}
 
     function rformSuccess() {
