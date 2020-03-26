@@ -10,6 +10,7 @@ var db = firebase.firestore();
 
 
 var app = express();
+app.use(express.static(__dirname + '/about'));
 app.set('port', (process.env.PORT || 5000));
 app.get('/', (request, response)=>{
 	response.redirect('https://app.res2.me/#/project/resumes');
