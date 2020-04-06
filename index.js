@@ -10,13 +10,13 @@ var db = firebase.firestore();
 
 
 var app = express();
-app.use(express.static(__dirname + '/about'));
+// app.use(express.static(__dirname + '/about'));
 app.set('port', (process.env.PORT || 5000));
 
-app.get('/', express.static('about'));
-// app.get('/', (request, response)=>{
-// 	response.redirect('https://app.res2.me/#/project/resumes');
-// })
+// app.get('/', express.static('about'));
+app.get('/', (request, response)=>{
+	response.redirect('https://app.res2.me/home');
+})
 app.get('/:id', (request, response)=>{
 	let ref = db.collection(`shortCode/res2me/list`).doc(request.params.id);
 	ref.get().then(r=>{
